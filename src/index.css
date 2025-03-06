@@ -362,13 +362,13 @@ body.dark .home .text {
 }
 
 .card-title {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     color: #333;
 }
 
 .card-description {
-    font-size: 16px;
+    font-size: 14px;
     color: #555;
     margin-top: 8px;
     display: -webkit-box;
@@ -421,13 +421,13 @@ body.dark .home .text {
 }
 
 .card-title-dark {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     color:  #e0e0e0;
 }
 
 .card-description-dark {
-    font-size: 16px;
+    font-size: 14px;
     color:  #cccccc;
     margin-top: 8px;
     display: -webkit-box;
@@ -539,3 +539,6 @@ body.dark .home .text {
     width: 29%;
     height: 300px;
   }
+
+
+  
