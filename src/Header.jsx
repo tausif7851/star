@@ -28,10 +28,16 @@ const Header = () => {
 
     return (
         <div className="header">
-            <nav className="premium-nav">
+            <nav className="premium-nav" style={{
+                background: `url('https://studioai.lenovo.com/asset/home/screen-banner.webp')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                backgroundRepeat: "no-repeat",
+            }}>
                 <div className={`nav-container  ${isDarkMode ? 'header-dark' : 'header-light'}`}>
                     <a href="#" className="nav-logo">
-                        <span className={`logo-text  ${isDarkMode ? 'logo-text-dark' : 'logo-text-light'}`}>Studio AI</span>
+                        <img style={{ width: "50%" }} src="https://studioai.lenovo.com/asset/home/login-logo-ai.webp" alt="" />
+                        {/* <span className={`logo-text  ${isDarkMode ? 'logo-text-dark' : 'logo-text-light'}`}>Lenovo Studio AI</span> */}
                         <div className="logo-shine"></div>
                     </a>
 
@@ -42,7 +48,7 @@ const Header = () => {
                         <div className={`nav-links`}>
                             <div className={`search-container ${isFocused ? 'expanded' : ''}`}>
                                 <button className="search-icon" onClick={handleFocus}>
-                                    <i className={`bx bx-search ${!isDarkMode ? 'search-box' : 'search-box-dark'}`}></i>
+                                    <i className={`bx bx-search search-box-dark ${!isFocused ? 'search-box-dark' : 'search-box-dark'}`}></i>
                                 </button>
                                 {isFocused && <input
                                     type="text"
@@ -56,15 +62,15 @@ const Header = () => {
                             </div>
 
                         </div>
-                        <button className={`${!isDarkMode ? 'theme-toggle' : 'theme-toggle-dark'}`} aria-label="Toggle theme" onClick={toggleDarkMode}>
+                        <button className="theme-toggle-dark" aria-label="Toggle theme" onClick={toggleDarkMode}>
 
                             {isDarkMode ? <i className="bx bx-sun"></i> : <i className="bx bx-moon"></i>}
                         </button>
-                        <button className={`${!isDarkMode ? 'theme-toggle' : 'theme-toggle-dark'}`} aria-label="Toggle theme">
+                        <button className="theme-toggle-dark" aria-label="Toggle theme">
 
                             <i className='bx bx-log-in'></i>
                         </button>
-                        <button className={`${!isDarkMode ? 'theme-toggle' : 'theme-toggle-dark'}`} aria-label="Toggle theme">
+                        <button className="theme-toggle-dark" aria-label="Toggle theme">
 
                             <i className='bx bx-user' ></i>
                         </button>
