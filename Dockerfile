@@ -1,29 +1,22 @@
-# Step 1: Build the React app
-FROM node:18 as build
+FROM node:20
 
-# Set the working directory in the container
+# Set the working directory inside the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json (if available)
-COPY package.json package-lock.json ./
+# Copy package.json and package-lock.json first to leverage Docker cache
+COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
-# Copy the entire app to the working directory
-COPY . ./
+# Copy all files into the container (ensuring basePath structure is preserved)
+COPY . .
 
-# Build the React app
+# Build the app
 RUN npm run build
 
-# Step 2: Set up the production server (using a smaller image)
-FROM nginx:alpine
+# Expose the port Next.js will run on
+EXPOSE 5173
 
-# Copy the build files from the build image
-COPY --from=build /app/build /usr/share/nginx/html
-
-# Expose port 80 (the default port for Nginx)
-EXPOSE 80
-
-# Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# Start the application
+CMD ["npm", "run", "dev"]
