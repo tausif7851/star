@@ -90,13 +90,18 @@ body.dark {
 
 .sidebar .text,
 .sidebar .icon {
-    color: var(--text-color);
+    color: #ffffff;
+    transition: var(--tran-03);
+}
+
+.sidebar .sidebar-last-text {
+    color:var(--text-color);
     transition: var(--tran-03);
 }
 
 .sidebar .text {
-    font-size: 17px;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 600;
     white-space: nowrap;
     opacity: 1;
 }
@@ -139,8 +144,9 @@ header .image-text .profession {
 }
 
 .sidebar header .image img {
-    width: 40px;
-    border-radius: 6px;
+    width: 70%;
+    border-radius: 0px;
+    cursor: pointer;
 }
 
 .sidebar header .toggle {
@@ -540,5 +546,9 @@ body.dark .home .text {
     height: 300px;
   }
 
+
+.sidebar-last-child {
+    color: black !important;
+}
 
   
