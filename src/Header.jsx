@@ -27,7 +27,7 @@ const Header = () => {
 
 
     return (
-        <div className="header">
+        <div className="header" style={{position:"fixed", width:"100%"}}>
             <nav className="premium-nav" style={{
                 background: `url('https://studioai.lenovo.com/asset/home/screen-banner.webp')`,
                 backgroundSize: "cover",
