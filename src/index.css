@@ -479,8 +479,9 @@ body.dark .home .text {
     flex-wrap: wrap;
     gap: 25px;
     padding: 20px 0px 0px 30px;
-    /* height: calc(100vh - 80px); */
+    height: calc(100vh - 80px);
     overflow: auto;
+    margin-top: 70px;
 }
 
 
