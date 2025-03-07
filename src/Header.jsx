@@ -66,10 +66,10 @@ const Header = () => {
 
                             {isDarkMode ? <i className="bx bx-sun"></i> : <i className="bx bx-moon"></i>}
                         </button>
-                        <button className="theme-toggle-dark" aria-label="Toggle theme">
+                        {/* <button className="theme-toggle-dark" aria-label="Toggle theme">
 
                             <i className='bx bx-log-in'></i>
-                        </button>
+                        </button> */}
                         <button className="theme-toggle-dark" aria-label="Toggle theme">
 
                             <i className='bx bx-user' ></i>
