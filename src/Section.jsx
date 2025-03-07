@@ -7,7 +7,7 @@ const Section = () => {
     const [details, setDetails] = useState(data)
 
     return (
-        <div className='section-top'>
+        <div className='section-top' >
             {
                 details.map((card) =>
                     <Card
